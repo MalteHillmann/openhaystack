@@ -130,6 +130,8 @@ void app_main(void)
 
     esp_bluedroid_init();
     esp_bluedroid_enable();
+	
+    esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_ADV, ESP_PWR_LVL_P9);	
 
     // Load the public key from the key partition
     static uint8_t public_key[28];
